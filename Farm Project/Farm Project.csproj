@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DC6714D-437B-4646-BB0D-08EFEA74C3B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Farm_Project</RootNamespace>
+    <AssemblyName>Farm Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\MT LAPTOPS\Desktop\APPLICATION\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>734EA3312F531EF1F7E97E5F0DF1FBA7CFBD7E7F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Farm Project_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\Downloads\_Getintopc.com_Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 3.5\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\..\Downloads\_Getintopc.com_Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 3.5\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business layer\Interface1.cs" />
+    <Compile Include="Dao Imp\Bill.cs" />
+    <Compile Include="Dao Imp\Item.cs" />
+    <Compile Include="Dao Imp\Trader.cs" />
+    <Compile Include="Dao Imp\user.cs" />
+    <Compile Include="Dao Imp\Utility.cs" />
+    <Compile Include="DaoInterface\Bill.cs" />
+    <Compile Include="DaoInterface\Item.cs" />
+    <Compile Include="DaoInterface\Trader.cs" />
+    <Compile Include="DaoInterface\User.cs" />
+    <Compile Include="Dto\Bill.cs" />
+    <Compile Include="Dto\item.cs" />
+    <Compile Include="Dto\Trader.cs" />
+    <Compile Include="Dto\User.cs" />
+    <Compile Include="Presentation\AddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\bills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\bills.Designer.cs">
+      <DependentUpon>bills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\DescripedBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\DescripedBill.Designer.cs">
+      <DependentUpon>DescripedBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\HomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\HomeScreen.Designer.cs">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Money_Transactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Money_Transactions.Designer.cs">
+      <DependentUpon>Money_Transactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\AddProductTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\AddProductTransaction.Designer.cs">
+      <DependentUpon>AddProductTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PayOff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\PayOff.Designer.cs">
+      <DependentUpon>PayOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Pays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Pays.Designer.cs">
+      <DependentUpon>Pays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ProductTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ProductTransactions.Designer.cs">
+      <DependentUpon>ProductTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\SellingBill22222.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\SellingBill22222.Designer.cs">
+      <DependentUpon>SellingBill22222.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Selling_bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Selling_bill.Designer.cs">
+      <DependentUpon>Selling_bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\items.Designer.cs">
+      <DependentUpon>items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Trader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Trader.Designer.cs">
+      <DependentUpon>Trader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Presentation\users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\users.Designer.cs">
+      <DependentUpon>users.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Presentation\AddItem.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\bills.resx">
+      <DependentUpon>bills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\DescripedBill.resx">
+      <DependentUpon>DescripedBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\HomeScreen.resx">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Money_Transactions.resx">
+      <DependentUpon>Money_Transactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\AddProductTransaction.resx">
+      <DependentUpon>AddProductTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\PayOff.resx">
+      <DependentUpon>PayOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Pays.resx">
+      <DependentUpon>Pays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ProductTransactions.resx">
+      <DependentUpon>ProductTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\SellingBill22222.resx">
+      <DependentUpon>SellingBill22222.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Selling_bill.resx">
+      <DependentUpon>Selling_bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\items.resx">
+      <DependentUpon>items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Trader.resx">
+      <DependentUpon>Trader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Presentation\users.resx">
+      <DependentUpon>users.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Farm Project_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
